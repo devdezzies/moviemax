@@ -13,10 +13,10 @@ class NetworkErrorModel extends Equatable {
   const NetworkErrorModel({required this.statusCode, required this.statusMessage});
 
   factory NetworkErrorModel.fromJson(Map<String, dynamic> json) {
-    return _$NetworkkErrorModelFromJson(json);
+    return _$NetworkErrorModelFromJson(json);
   }
 
-  Map<String, dynamic> toJson() => _$NetworkkErrorModelToJson(this);
+  Map<String, dynamic> toJson() => _$NetworkErrorModelToJson(this);
 
   @override
   List<Object?> get props => [statusCode, statusMessage];
