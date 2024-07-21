@@ -1,4 +1,5 @@
 import 'package:isar/isar.dart';
+import 'package:moviemax/src/data/datasources/local/_collection/movie_detail/movie_detail_collection.dart';
 import 'package:path_provider/path_provider.dart';
 
 class LocalDatabase {
@@ -13,8 +14,7 @@ class LocalDatabase {
     }
 
     final directory = await getApplicationDocumentsDirectory();
-    //_isar = await Isar.open([MovieDetailCollectionSchema], directory: directory.path);
-
+    _isar = await Isar.open([MovieDetailCollectionSchema], directory: directory.path);
     _isInitialized = true;
   }
 }

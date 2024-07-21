@@ -25,8 +25,8 @@ class MovieUsecases {
 
   // LOCAL
 
-  Future<Either<DatabaseException, MovieDetailEntity>> getSavedMovieDetails({required int movieId}) {
-    return _movieRepository.getSavedMovieDetails(movieId: movieId);
+  Future<Either<DatabaseException, List<MovieDetailEntity>>> getSavedMovieDetails() {
+    return _movieRepository.getSavedMovieDetails();
   }
 
   Future<Either<DatabaseException, void>> toggleBookmark({required MovieDetailEntity? movieDetailEntity}) async {

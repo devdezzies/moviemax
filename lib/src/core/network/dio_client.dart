@@ -26,6 +26,28 @@ class DioClient {
       );
   }
 
+  // GET 
+  Future<Response<dynamic>> get(
+    String url, {
+    Map<String, dynamic>? queryParameters,
+    Options? options,
+    CancelToken? cancelToken,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    try {
+      final response = await _dio.get(
+        url,
+        queryParameters: queryParameters,
+        options: options,
+        cancelToken: cancelToken,
+        onReceiveProgress: onReceiveProgress,
+      );
+      return response;
+    } on DioException {
+      rethrow;
+    }
+  }
+
   // POST
   Future<Response<dynamic>> post(String uri,
       {data,

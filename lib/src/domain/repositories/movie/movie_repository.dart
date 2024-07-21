@@ -12,7 +12,7 @@ abstract class MovieRepository {
 
   Future<Either<NetworkException, MovieCreditEntity>> getMovieCredits({required int movieId});
 
-  Future<Either<DatabaseException, MovieDetailEntity>> getSavedMovieDetails({required int movieId});
+  Future<Either<DatabaseException, List<MovieDetailEntity>>> getSavedMovieDetails();
 
   Future<Either<DatabaseException, void>> saveMovieDetails({required MovieDetailEntity? movieDetailEntity});
 
