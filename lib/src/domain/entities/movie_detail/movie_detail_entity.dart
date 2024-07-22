@@ -17,20 +17,20 @@ class MovieDetailEntity extends Equatable {
   final bool? adult;
 
   const MovieDetailEntity(
-      {required this.title,
-      required this.video,
-      required this.posterPath,
-      required this.popularity,
-      required this.releaseDate,
-      required this.voteAverage,
-      required this.voteCount,
-      required this.overview,
-      required this.originalTitle,
-      required this.originalLanguage,
-      required this.id,
-      required this.genreIds,
-      required this.backdropPath,
-      required this.adult});
+      {this.title,
+      this.video,
+      this.posterPath,
+      this.popularity,
+      this.releaseDate,
+      this.voteAverage,
+      this.voteCount,
+      this.overview,
+      this.originalTitle,
+      this.originalLanguage,
+      this.id,
+      this.genreIds,
+      this.backdropPath,
+      this.adult});
 
   @override
   List<Object?> get props => [

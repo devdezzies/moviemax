@@ -8,17 +8,8 @@ class MovieListingsEntity extends Equatable {
   final int? totalResults;
 
   const MovieListingsEntity(
-      {required this.page,
-      required this.movies,
-      required this.totalPages,
-      required this.totalResults});
-      
-    @override
+      {this.page, this.movies, this.totalPages, this.totalResults});
 
-    List<Object?> get props => [
-      page, 
-      movies, 
-      totalPages, 
-      totalResults
-    ];
+  @override
+  List<Object?> get props => [page, movies, totalPages, totalResults];
 }
