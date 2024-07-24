@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:moviemax/src/core/constants/path_constants.dart';
 import 'package:moviemax/src/presentation/view/bookmark_screen.dart';
 import 'package:moviemax/src/presentation/view/explore_screen.dart';
+import 'package:moviemax/src/presentation/view/home_screen.dart';
 import 'package:moviemax/src/presentation/view/main_view.dart';
 //import 'package:moviemax/src/presentation/view/home_screen.dart';
 
@@ -17,6 +18,10 @@ class AppRouter extends _$AppRouter {
           path: PathConstants.main,
           initial: true,
           children: [
+            AdaptiveRoute(
+                page: HomeRoute.page,
+                path: PathConstants.home,
+                title: (__, _) => 'Home'),
             AdaptiveRoute(
               page: ExploreRoute.page,
               path: PathConstants.explore,

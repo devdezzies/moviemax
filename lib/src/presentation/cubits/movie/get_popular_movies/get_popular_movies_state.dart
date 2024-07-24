@@ -8,3 +8,23 @@ sealed class GetPopularMoviesState extends Equatable {
 }
 
 final class GetPopularMoviesInitial extends GetPopularMoviesState {}
+
+final class GetPopularMoviesLoading extends GetPopularMoviesState {}
+
+final class GetPopularMoviesFailed extends GetPopularMoviesState {
+  final String message;
+
+  const GetPopularMoviesFailed({required this.message}); 
+
+  @override
+  List<Object> get props => [message];
+}
+
+final class GetPopularMoviesLoaded extends GetPopularMoviesState {
+  final List<MovieDetailEntity> movies;
+
+  const GetPopularMoviesLoaded({required this.movies});
+
+  @override
+  List<Object> get props => [movies];
+}
