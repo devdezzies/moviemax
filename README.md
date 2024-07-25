@@ -1,6 +1,6 @@
-# MovieApp
+# MovieMax
 
-MovieApp is an open-source mobile application that provides users with up-to-date information about movies, including details, trailers, ratings, and more. This app leverages the TMDB (The Movie Database) API to fetch and display movie data. It is built using Flutter for a cross-platform experience on both iOS and Android.
+MovieMax is an open-source mobile application that provides users with up-to-date information about movies, including details, trailers, ratings, and more. This app leverages the TMDB (The Movie Database) API to fetch and display movie data. It is built using Flutter for a cross-platform experience on both iOS and Android.
 
 ## Features
 
