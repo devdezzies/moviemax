@@ -8,7 +8,7 @@ MovieMax is an open-source mobile application that provides users with up-to-dat
 - **Movie Details**: View detailed information about each movie, including the plot, cast, crew, and user ratings.
 - **Search**: Find movies by title.
 - **Trailers**: Watch movie trailers directly within the app.
-- **watchlist**: Save your favorite movies for quick access.
+- **Watchlist**: Save your favorite movies for quick access.
 
 ## Screenshots
 
@@ -63,5 +63,5 @@ This project is licensed under the MIT License
 
 - [Flutter](https://www.flutter.dev/) - for the cross-platform mobile framework 
 - [TMDB](https://www.themoviedb.org/) - for the movie database API
-- [Flutter Clean Architecture Part 1 by Enes Akbal](https://medium.com/@enesakbal00/flutter-clean-architecture-part-1-introduction-f5dadf1bf3ee) - as the main learning resource for Flutter Clean Architecture
+- [Flutter Clean Architecture by Enes Akbal](https://medium.com/@enesakbal00/flutter-clean-architecture-part-1-introduction-f5dadf1bf3ee) - as the main learning resource for Flutter Clean Architecture
 
