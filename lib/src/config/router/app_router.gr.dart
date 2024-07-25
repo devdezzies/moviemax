@@ -39,6 +39,18 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const MainView(),
       );
     },
+    MovieDetailRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const MovieDetailScreen(),
+      );
+    },
+    PopularMoviesRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const PopularMoviesView(),
+      );
+    },
   };
 }
 
@@ -94,6 +106,34 @@ class MainRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'MainRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [MovieDetailScreen]
+class MovieDetailRoute extends PageRouteInfo<void> {
+  const MovieDetailRoute({List<PageRouteInfo>? children})
+      : super(
+          MovieDetailRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'MovieDetailRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [PopularMoviesView]
+class PopularMoviesRoute extends PageRouteInfo<void> {
+  const PopularMoviesRoute({List<PageRouteInfo>? children})
+      : super(
+          PopularMoviesRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'PopularMoviesRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

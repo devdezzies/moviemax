@@ -7,4 +7,5 @@ class PathConstants {
 
   // POP
   static const String movieDetail = '/movie-detail';
+  static const String popularMoviesView = 'popular-movies-view';
 }

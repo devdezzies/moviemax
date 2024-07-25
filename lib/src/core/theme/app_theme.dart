@@ -29,7 +29,7 @@ class AppTheme {
     appBarStyle: FlexAppBarStyle.primary,
     tabBarStyle: FlexTabBarStyle.forAppBar,
     swapColors: true,
-    //appBarBackground: Colors.lightGreen,
+    appBarBackground: Colors.black,
     background: Colors.black,
     scaffoldBackground: Colors.black,
     subThemesData: const FlexSubThemesData(bottomAppBarSchemeColor: SchemeColor.primary),

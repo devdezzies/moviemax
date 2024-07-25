@@ -7,6 +7,7 @@ import 'package:moviemax/src/core/theme/cubit/theme_cubit.dart';
 import 'package:moviemax/src/injector.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:moviemax/src/presentation/cubits/movie/get_movie_credits/get_movie_credits_cubit.dart';
+import 'package:moviemax/src/presentation/cubits/movie/get_popular_movies/get_popular_movies_cubit.dart';
 import 'package:path_provider/path_provider.dart';
 import 'src/config/router/app_router.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -18,7 +19,8 @@ void main() async {
   await dotenv.load(fileName: ".env");
   setup();
   final directory = await getApplicationDocumentsDirectory();
-  HydratedBloc.storage = await HydratedStorage.build(storageDirectory: directory);
+  HydratedBloc.storage =
+      await HydratedStorage.build(storageDirectory: directory);
   runApp(const MyApp());
 }
 
@@ -34,6 +36,9 @@ class MyApp extends StatelessWidget {
         BlocProvider<GetMovieCreditsCubit>(
           create: (context) => injector<GetMovieCreditsCubit>(),
         ),
+        BlocProvider(
+            create: (_) =>
+                GetIt.I<GetPopularMoviesCubit>()..getPopularMovies()),
       ],
       child: ScreenUtilInit(
         designSize: const Size(360, 690),
