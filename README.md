@@ -12,7 +12,7 @@ MovieMax is an open-source mobile application that provides users with up-to-dat
 
 ## Screenshots
 
-![Home Screen](https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+![Movie Detail Screen](https://i.ibb.co.com/PT4fTcv/Whats-App-Image-2024-07-27-at-11-49-44-7c8d442c.jpg)
 
 ## Installation
 

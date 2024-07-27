@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:moviemax/src/core/constants/path_constants.dart';
+import 'package:moviemax/src/domain/entities/export_entities.dart';
 import 'package:moviemax/src/presentation/view/bookmark_screen.dart';
 import 'package:moviemax/src/presentation/view/explore_screen.dart';
 import 'package:moviemax/src/presentation/view/home_screen.dart';
@@ -35,19 +36,20 @@ class AppRouter extends _$AppRouter {
                 path: PathConstants.bookmark,
                 title: (__, _) => 'Bookmarks'),
             AdaptiveRoute(
-                    page: PopularMoviesRoute.page,
-                    path: PathConstants.popularMoviesView,
+              page: PopularMoviesRoute.page,
+              path: PathConstants.popularMoviesView,
             )
           ],
         ),
         CustomRoute(
             page: MovieDetailRoute.page,
             path: PathConstants.movieDetail,
-            durationInMilliseconds: 300,
-            reverseDurationInMilliseconds: 300,
+            durationInMilliseconds: 600,
+            reverseDurationInMilliseconds: 600,
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {
               return ScaleTransition(
+                //filterQuality: FilterQuality.high,
                 scale: animation,
                 child: child,
               );

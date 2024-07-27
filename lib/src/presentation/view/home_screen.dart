@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:moviemax/src/config/router/app_router.dart';
 import 'package:moviemax/src/core/components/home_screen_title_section.dart';
-import 'package:moviemax/src/core/constants/path_constants.dart';
 import 'package:moviemax/src/presentation/cubits/movie/get_popular_movies/get_popular_movies_cubit.dart';
 import 'package:moviemax/src/presentation/widgets/movie_horizontal_list.dart';
 

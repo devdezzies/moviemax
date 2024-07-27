@@ -18,7 +18,7 @@ class HomeScreenTitleSection extends StatelessWidget {
               flex: 3,
               child: Text(
                 headerTitle,
-                style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
+                style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 20),
               )),
           Expanded(
             flex: 1,
@@ -26,7 +26,7 @@ class HomeScreenTitleSection extends StatelessWidget {
               onTap: onTapCallBack,
               child: Container(
                   alignment: Alignment.centerRight,
-                  child: const Text("View All")),
+                  child: const Text("View All", style: TextStyle(fontWeight: FontWeight.w400),)),
             ),
           )
         ],

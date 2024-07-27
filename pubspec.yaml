@@ -116,6 +116,19 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+  fonts: 
+    - family: Gotham
+      fonts: 
+        - asset: assets/fonts/Gotham-Black.otf
+          weight: 600
+        - asset: assets/fonts/Gotham-Bold.otf
+          weight: 700 
+        - asset: assets/fonts/GothamMedium.ttf
+          weight: 500
+        - asset: assets/fonts/GothamBook.ttf
+          weight: 400 
+        - asset: assets/fonts/Gotham-Light.otf 
+          weight: 300
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

@@ -36,7 +36,7 @@ class GetPopularMoviesCubit extends Cubit<GetPopularMoviesState> {
             hasReachedMax = true;
           }
 
-          emit(GetPopularMoviesLoaded(movies: List.of(_movieList)));
+          emit(GetPopularMoviesLoaded(movies: List.of(_movieList), totalResults: success.totalResults ?? 0));
         },
       );
     } catch (_) {

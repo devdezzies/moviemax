@@ -13,34 +13,34 @@ class PopularMoviesView extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          leading: GestureDetector(
-              onTap: () {
-                context.router.navigate(const HomeRoute());
-              },
-              child: const Icon(Icons.arrow_back)),
-        ),
-        body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10.h),
-          child: BlocBuilder<GetPopularMoviesCubit, GetPopularMoviesState>(
-            builder: (context, state) {
-              if (state is GetPopularMoviesFailed) {
-                return const Text("error");
-              }
-              if (state is! GetPopularMoviesLoaded) {
-                return const CircularProgressIndicator();
-              }
-              return MovieListings(
+    return BlocBuilder<GetPopularMoviesCubit, GetPopularMoviesState>(
+      builder: (context, state) {
+        if (state is GetPopularMoviesFailed) {
+          return const Text("error");
+        }
+        if (state is! GetPopularMoviesLoaded) {
+          return const CircularProgressIndicator();
+        }
+        return Scaffold(
+          appBar: AppBar(
+            leading: GestureDetector(
+                onTap: () {
+                  context.router.navigate(const HomeRoute());
+                },
+                child: const Icon(Icons.arrow_back)),
+          ),
+          body: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.h),
+              child: MovieListings(
                 movies: state.movies,
                 whenScrollBottom: () async {
                   context.read<GetPopularMoviesCubit>().getPopularMovies();
                 },
                 hasReachedMax:
                     context.watch<GetPopularMoviesCubit>().hasReachedMax,
-              );
-            },
-          ),
-        ));
+              )),
+        );
+      },
+    );
   }
 }

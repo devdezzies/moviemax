@@ -22,7 +22,7 @@ class MovieCard extends StatelessWidget {
             // placeholder: (context, text) {
             //   return Image.network("https://images.unsplash.com/photo-1721714874858-18526c08b8d7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
             // },
-            progressIndicatorBuilder:(context, url, progress) => const Center(child: CircularProgressIndicator(),),
+            //progressIndicatorBuilder:(context, url, progress) => const Center(child: CircularProgressIndicator(),),
             imageUrl:
                 '${ImageUrlConstants.originalImage(movieDetailEntity?.posterPath)}',
             fit: BoxFit.cover,

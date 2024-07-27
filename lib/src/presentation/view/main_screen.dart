@@ -13,7 +13,6 @@ class MainView extends StatelessWidget {
       lazyLoad: false,
       animationDuration: const Duration(milliseconds: 100),
       navigatorObservers: () => [HeroController()],
-      
       routes: const [
         HomeRoute(),
         ExploreRoute(),
@@ -24,13 +23,22 @@ class MainView extends StatelessWidget {
         return Container(
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(25)),
           child: BottomNavigationBar(
+            enableFeedback: false,
+            currentIndex: tabsRouter.activeIndex > 2 ? 0 : tabsRouter.activeIndex,
             onTap: tabsRouter.setActiveIndex,
             items: const [
-              BottomNavigationBarItem(icon: Icon(Icons.movie), label: 'Movie'),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.explore_outlined), label: 'explore'),
+                  icon: Icon(Icons.movie_creation_outlined),
+                  label: 'Movie',
+                  activeIcon: Icon(Icons.movie)),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.bookmark), label: 'bookmark')
+                  icon: Icon(Icons.explore_outlined),
+                  label: 'explore',
+                  activeIcon: Icon(Icons.explore_rounded)),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.bookmark_border),
+                  label: 'bookmark',
+                  activeIcon: Icon(Icons.bookmark))
             ],
           ),
         );

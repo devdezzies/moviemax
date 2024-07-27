@@ -60,7 +60,7 @@ class MovieListings extends HookWidget {
             final tag = UniqueKey();
             return GestureDetector(
                 onTap: () {
-                  context.router.push(const MovieDetailRoute());
+                  context.router.push(MovieDetailRoute(heroTag: tag, movie: movies![index]));
                 },
                 child: Hero(
                     tag: tag,
